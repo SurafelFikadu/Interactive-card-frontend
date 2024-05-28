@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Space Grotesk", sans-serif;
+    text-transform: uppercase;
+    background-color: black;
+}
+
+main {
+    background-image: url(./images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 375px;
+    background-color: aliceblue;
+    height: 700px;
+}
+
+
+/* card and its component */
+.card {
+    position: absolute;
+}
+
+#card-back {
+    top: 30px;
+    right: 15px;
+}
+
+.num {
+    color: white;
+    position: absolute;
+    top: 103px;
+    right: 50px;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+}
+
+.bg-circle {
+    height: 1.8rem;
+    width: 1.8rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 135px;
+    left: 40px;
+}
+
+.small-circle {
+    height: 0.8rem;
+    width: 0.8rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 143px;
+    left: 80px;
+}
+
+.zeros {
+    color: rgb(238, 225, 225);
+    position: absolute;
+    top: 200px;
+    font-size: 1.2rem;
+    left: 40px;
+    letter-spacing: 0.1rem;
+}
+
+.jane {
+    color: rgb(240, 235, 235);
+    position: absolute;
+    top: 250px;
+    left: 40px;
+    font-size: 0.7rem;
+    letter-spacing: 0.1rem;
+}
+
+.two-zero {
+    color: rgb(235, 228, 228);
+    position: absolute;
+    top: 250px;
+    left: 250px;
+    font-size: 0.7rem;
+    letter-spacing: 0.1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+#card-front {
+    top: 120px;
+    left: 15px;
+}
+
+/* form */
+
+form {
+    position: absolute;
+    top: 320px;
+    padding: 20px;
+}
+
+label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.1rem;
+}
+
+input {
+    padding: 0.8rem;
+    border-radius: 8px;
+    border-color: rgb(233, 233, 233);
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.input-label {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.date-input {
+    display: flex;
+    flex-direction: rows;
+    flex-wrap: wrap;
+}
+
+span {
+    margin-left: 20px;
+}
+
+#year,
+#month {
+    width: 80px;
+    margin-right: 7px;
+}
+
+#day {
+    width: 100px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    padding: 1rem;
+    width: 100%;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.success-phase {
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 2rem;
+}
+
+.success-phase h1 {
+    margin: 1.5rem 0;
+    font-weight: 500;
+}
+
+.success-phase h3 {
+    text-transform: none;
+    color: rgb(136, 133, 133);
+}
+
+/* Utilitis */
+.hidden {
+    display: none;
+}
+
+@media (min-width: 900px) {
+    body {
+        height: 100vh;
+    }
+
+    main {
+        background-image: url(./images/bg-main-desktop.png);
+        min-width: 880px;
+        height: 595px;
+        background-size: 320px;
+    }
+
+    #card-front {
+        left: 95px;
+    }
+
+    .bg-circle {
+        left: 115px;
+    }
+
+    .small-circle {
+        left: 155px;
+    }
+
+    .zeros {
+        left: 115px;
+    }
+
+    .jane {
+        left: 115px;
+    }
+
+    .two-zero {
+        left: 315px;
+    }
+
+    #card-back {
+        top: 307px;
+        right: 435px;
+    }
+
+    .num {
+        top: 380px;
+        right: 470px;
+    }
+
+    form {
+        top: 120px;
+        right: 100px;
+        padding: 20px;
+    }
+}
